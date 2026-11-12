@@ -1,23 +1,19 @@
 
-# Build stage
 FROM node:22-alpine AS build
 
 RUN apk add --no-cache \
-  build-base \
-  gcc \
-  autoconf \
-  automake \
-  zlib-dev \
-  libpng-dev \
-  vips-dev \
-  git \
   python3 \
-  make
+  make \
+  g++ \
+  gcc \
+  build-base \
+  vips-dev \
+  zlib-dev \
+  libpng-dev
 
 WORKDIR /opt/app
 
 COPY package.json ./
-
 RUN npm install
 
 COPY . .
@@ -26,7 +22,6 @@ ENV NODE_ENV=production
 
 RUN npm run build
 
-# Production stage
 FROM node:22-alpine AS production
 
 RUN apk add --no-cache vips
