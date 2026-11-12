@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contact_submissions",
+  "info": {
+    "singularName": "contact-submission",
+    "pluralName": "contact-submissions",
+    "displayName": "Contact Submission"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "inquiryArea": {
+      "type": "enumeration",
+      "enum": [
+        "Collaboration or partnership",
+        "Publications or media",
+        "Events or convenings",
+        "Leadership development or training",
+        "General inquiry"
+      ],
+      "required": true
+    },
+    "organization": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

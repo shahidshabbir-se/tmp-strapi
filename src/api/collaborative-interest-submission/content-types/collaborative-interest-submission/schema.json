@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "collaborative_interest_submissions",
+  "info": {
+    "singularName": "collaborative-interest-submission",
+    "pluralName": "collaborative-interest-submissions",
+    "displayName": "Collaborative Interest Submission"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "organization": {
+      "type": "string",
+      "required": false
+    },
+    "interestArea": {
+      "type": "string",
+      "required": true
+    },
+    "message": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

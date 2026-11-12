@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "collaboratives_pages",
+  "info": {
+    "singularName": "collaboratives-page",
+    "pluralName": "collaboratives-pages",
+    "displayName": "collaboratives-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeroTitle": {
+      "type": "string",
+      "required": true
+    },
+    "Sections": {
+      "type": "component",
+      "component": "shared.section",
+      "repeatable": true,
+      "required": true
+    },
+    "Partners": {
+      "type": "component",
+      "component": "shared.partner",
+      "repeatable": true,
+      "required": true
+    }
+  }
+}

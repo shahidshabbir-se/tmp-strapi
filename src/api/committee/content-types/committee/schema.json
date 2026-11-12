@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "committees",
+  "info": {
+    "singularName": "committee",
+    "pluralName": "committees",
+    "displayName": "Committee",
+    "description": "Organizational boards, standing committees, and advisory councils"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["board_of_trustees", "standing_committee", "advisory_board"],
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "displayOrder": {
+      "type": "integer",
+      "default": 0
+    },
+    "officers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::officer.officer",
+      "mappedBy": "committees"
+    }
+  }
+}

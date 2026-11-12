@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_misc_social_links",
+  "info": {
+    "displayName": "social-links"
+  },
+  "options": {},
+  "attributes": {
+    "platform": {
+      "type": "enumeration",
+      "enum": ["Instagram", "Facebook", "LinkedIn", "X", "Youtube"]
+    },
+    "URL": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

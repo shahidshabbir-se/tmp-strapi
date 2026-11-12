@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_sections",
+  "info": {
+    "displayName": "section"
+  },
+  "options": {},
+  "attributes": {
+    "Heading": {
+      "type": "string"
+    },
+    "Body": {
+      "type": "blocks"
+    },
+    "Callout": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

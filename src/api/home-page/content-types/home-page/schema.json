@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "home-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeroHeadline": {
+      "type": "string",
+      "required": true
+    },
+    "HeroSubtitle": {
+      "type": "text",
+      "required": true
+    },
+    "Sections": {
+      "type": "component",
+      "component": "shared.section",
+      "repeatable": true
+    },
+    "SectionHeading": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

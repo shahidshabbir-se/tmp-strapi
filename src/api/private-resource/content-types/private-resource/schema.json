@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "private_resources",
+  "info": {
+    "singularName": "private-resource",
+    "pluralName": "private-resources",
+    "displayName": "Private Resource",
+    "description": "Public, member, and board resources"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Governance & Minutes",
+        "Working Papers",
+        "Toolkits & Briefs",
+        "Convenings"
+      ],
+      "required": true
+    },
+    "accessLevel": {
+      "type": "enumeration",
+      "enum": ["public", "member", "board_only"],
+      "default": "member",
+      "required": true
+    },
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["files", "images", "videos", "audios"]
+    },
+    "externalUrl": {
+      "type": "string"
+    },
+    "topics": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::topic.topic",
+      "mappedBy": "resources"
+    }
+  }
+}

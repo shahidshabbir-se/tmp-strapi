@@ -1,0 +1,60 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_pages",
+  "info": {
+    "singularName": "contact-page",
+    "pluralName": "contact-pages",
+    "displayName": "contact-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeroTitle": {
+      "type": "string",
+      "required": true
+    },
+    "HeroSubtitle": {
+      "type": "string",
+      "required": true
+    },
+    "Sections": {
+      "type": "component",
+      "component": "shared.section",
+      "repeatable": true
+    },
+    "GetInTouchHeading": {
+      "type": "string",
+      "required": true
+    },
+    "SuccessHeading": {
+      "type": "string",
+      "required": true
+    },
+    "SuccessBody": {
+      "type": "string",
+      "required": true
+    },
+    "RoutingEmail": {
+      "type": "email",
+      "required": true
+    },
+    "Phone": {
+      "type": "string",
+      "required": false
+    },
+    "Address": {
+      "type": "text",
+      "required": false
+    },
+    "ResponseTimeText": {
+      "type": "string",
+      "required": false
+    },
+    "FormSubjectOptions": {
+      "type": "json",
+      "required": false
+    }
+  }
+}

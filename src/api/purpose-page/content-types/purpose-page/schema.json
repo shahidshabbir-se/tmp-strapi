@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "purpose_pages",
+  "info": {
+    "singularName": "purpose-page",
+    "pluralName": "purpose-pages",
+    "displayName": "purpose-page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeroTitle": {
+      "type": "string",
+      "required": true
+    },
+    "Sections": {
+      "type": "component",
+      "component": "shared.section",
+      "repeatable": true,
+      "required": true
+    },
+    "Cards": {
+      "type": "component",
+      "component": "shared.text-card",
+      "repeatable": true,
+      "required": false
+    }
+  }
+}

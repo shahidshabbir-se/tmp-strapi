@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_playlist_playlist_items",
+  "info": {
+    "displayName": "playlist item",
+    "description": "One video at an explicit editorial position in a playlist."
+  },
+  "options": {},
+  "attributes": {
+    "position": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "video": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::video.video"
+    }
+  },
+  "config": {}
+}
